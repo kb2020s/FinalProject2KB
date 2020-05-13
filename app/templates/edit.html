@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/edit/{{zillow.id}}" method="post">
+    <div class="row">
+        <div class="col">
+            <label for="Living_Space_sq_ft">Living Space</label>
+            <input id="Living_Space_sq_ft" type="text" class="form-control" placeholder="Living Space" name="Living_Space_sq_ft" value="{{zillow.Living_Space_sq_ft}}">
+        </div>
+        <div class="col">
+            <label for="Beds">Beds</label>
+            <input id="Beds" type="text" class="form-control" placeholder="Beds"
+                   name="Beds" value="{{zillow.Beds}}">
+        </div>
+        <div class="col">
+            <label for="Baths">Baths</label>
+            <input id="Baths" type="text" class="form-control" placeholder="Baths" name="Baths" value="{{zillow.Baths}}">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <label for="Zip">Zip</label>
+            <input id="Zip" type="text" class="form-control" placeholder="Zip" name="Zip" value="{{zillow.Zip}}">
+        </div>
+        <div class="col">
+            <label for="Year">Year</label>
+            <input id="Year" type="text" class="form-control" placeholder="Year" name="Year" value="{{zillow.Year}}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="List_Price">List Price</label>
+
+            <input id="List_Price" type="text" class="form-control" placeholder="List_Price"
+                   name="List_Price" value="{{zillow.List_Price}}">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-success">Save</button>
+
+</form>
+{% endblock %}
